@@ -1,10 +1,26 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
 
+        Digit A <input id='A' type="text"><br><br>
+        Digit B <input id='B' type="text"><br><br><br>
+        <button class="btn btn-primary" onclick="ButtonClick(event)" id="operation" data-index-link="{% url 'sub'%}" >Sub</button><br><br>
+        <button class="btn btn-primary" onclick="ButtonClick(event)" id="operation" data-index-link="{% url 'mul'%}" >Mul</button><br><br>
+        <button class="btn btn-primary" onclick="ButtonClick(event)" id="operation" data-index-link="{% url 'div'%}" >Div</button><br><br>
+        <button class="btn btn-primary" onclick="ButtonClick(event)" id="operation" data-index-link="{% url 'add'%}" >Add</button><br><br>
+
+        <p id="answer">
+
+        </p>
+
+<script src="{% static 'js/main.js' %}"></script>
 </body>
+
 </html>
